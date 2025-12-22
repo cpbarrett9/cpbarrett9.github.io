@@ -19,6 +19,12 @@ html {
   }
 }
 
+@media (max-width: 1060px) {
+  .project-image-container {
+    width: 50%;
+  }
+}
+
 /* Nav Menu: */
 
 .toggler{
@@ -198,11 +204,43 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   display: none;
 }
 
-/* Images in the projects section: */
+/* Images in the projects section:
 .projects-section img {
+  object-fit: cover;
+} */
+
+.project-image-container {
   height: 200px;
   width: 1000px;
+  overflow: hidden;
+}
+
+.project-image-container img {
+  width: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+/* KEN BURNS (WIP) */
+
+@keyframes kenburns {
+
+  95% {
+    transform: translate3d(0px, -300px, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0px, -300px, 0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+}
+
+.projects-section img:hover {
+  animation: kenburns 20s infinite;
 }
 
 [data-theme="light"] #light-icon {
