@@ -3,6 +3,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Light/Dark Theme Toggle */
+#theme-toggle {
+  position: fixed;
+  left: 90px;
+  top: 46px;
+}
+
 /* Change setting for smaller screens: */
 @media (max-width: 1505px) { 
   .main {
@@ -30,10 +37,10 @@ html {
 .toggler{
 
     z-index:2;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     position: fixed;
-    top: 30px;
+    top: 40px;
     left: 50px;
     cursor: pointer;
     opacity: 0;
@@ -58,8 +65,8 @@ html {
 /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
 
 .hamburger > div{
-    color:#000000;
-    background:#000000;
+    color: var(--text-color);
+    background: var(--text-color);
     position: relative;
     top: 0;
     left: 0;
@@ -72,8 +79,8 @@ html {
 TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .hamburger > div::before {
-    background: black;
-    background:#000000;
+    background: var(--text-color);
+    background: var(--text-color);
     content: '';
     position: absolute;
     top: -10px;
@@ -82,8 +89,8 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     transition: all  0.4s ease;
 }
 .hamburger > div::after{
-    color:#000000;
-    background:#000000;
+    color: var(--text-color);
+    background: var(--text-color);
     content: '';
     position: absolute;
     top: -10px;
@@ -94,23 +101,23 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 
 .hamburger > div::after{
-    color:#000000;
-    background:#000000;
+    color: var(--text-color);
+    background: var(--text-color);
     top: 10px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
 
 .toggler:checked + .hamburger > div{
-    background: rgba(0,0,0,0);
-    background: black;
+    background: var(--text-color);
+    background: var(--text-color);
 }
 
 .toggler:checked + .hamburger > div::before{
     top: 0;
     transform: rotate(45deg);
-    background:#000000;
-    background: black;
+    background: var(--text-color);
+    background: var(--text-color);
 }
 
 /* AND ROTATING THE TOP AND BOTTOM LINES :  */
@@ -118,7 +125,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .toggler:checked + .hamburger > div::after{
     top: 0;
     transform: rotate(135deg);
-    background: black;
+    background: var(--text-color);
 }
 
 
@@ -158,11 +165,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .menu > div > ul > li{
     list-style: none;
     padding-top: 0.22rem;
+    color: var(--text-color);
 }
 
 .menu > div > ul > li > a{
     color: black;
     text-decoration: none;
+    color: var(--text-color);
 }
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
@@ -241,6 +250,15 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .projects-section img:hover {
   animation: kenburns 20s infinite;
+}
+
+.projects-section a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.projects-section a:hover {
+  text-decoration: underline;
 }
 
 [data-theme="light"] #light-icon {

@@ -16,36 +16,17 @@
       <input type="checkbox" class="toggler">
       <div class="hamburger"><div></div></div>
       <div class="menu">
-          <div>
-              <ul>
-                  <li><a href="#" onclick="
-                    window.scrollTo({top:0,behavior:'smooth'}); 
-                    return false;"
-                  >About</a></li>
-                  <li><a href='#education-divider'>Education</a></li>
-                  <li><a href='#projects-divider'>Projects</a></li>
-                  <li><a href='#experience-divider'>Experience</a></li>
-                  <li><a href='#tech-divider'>Full Tech Stack</a></li>
-              </ul>
-          </div>
-      </div>
-    </div>
-
-    <div class="main">
-      <header>
-        <div class="header">
-          <h1 class="name">Chris Barrett</h1>
-          <button id="theme-toggle" aria-label="Toggle Theme">
+        <button id="theme-toggle" aria-label="Toggle Theme">
             <!-- Light Mode SVG -->
             <svg
               id="light-icon"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              stroke-width="1.5"
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-sun-icon lucide-sun"
@@ -64,12 +45,12 @@
             <svg
               id="dark-icon"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              stroke-width="1.5"
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-moon-icon lucide-moon"
@@ -100,6 +81,25 @@
               localStorage.setItem("theme", theme);
             }
           </script>
+          <div>
+              <ul>
+                  <li><a href="#" onclick="
+                    window.scrollTo({top:0,behavior:'smooth'}); 
+                    return false;"
+                  >About</a></li>
+                  <li><a href='#education-divider'>Education</a></li>
+                  <li><a href='#projects-divider'>Projects</a></li>
+                  <li><a href='#experience-divider'>Experience</a></li>
+                  <li><a href='#tech-divider'>Full Tech Stack</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <header>
+        <div class="header">
+          <h1 class="name">Chris Barrett</h1>
         </div>
         <p class="description">
           Software Development Student
