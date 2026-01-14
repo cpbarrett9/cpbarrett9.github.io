@@ -26,6 +26,7 @@ html {
   }
 }
 
+/* Mobile Display */
 @media (max-width: 1060px) {
   .project-image-container {
     width: 50%;
@@ -232,7 +233,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* KEN BURNS (WIP) */
 
-@keyframes kenburns {
+@media (min-width: 1060px) { /* Once enabled on larger screens */
+
+  @keyframes kenburns {
 
   95% {
     transform: translate3d(0px, -150px, 0px);
@@ -246,6 +249,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     opacity: 1;
   }
 
+  }
 }
 
 .projects-section img:hover {
