@@ -351,6 +351,7 @@ h2 {
   color: var(--svg-color);
   padding: 2px 8px;
   border-radius: 2px;
+  flex-wrap: wrap; 
 }
 
 .project-title {
