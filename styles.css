@@ -220,7 +220,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .project-image-container {
   height: 200px;
-  width: 1000px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -235,13 +235,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 @keyframes kenburns {
 
   95% {
-    transform: translate3d(0px, -300px, 0px);
+    transform: translate3d(0px, -150px, 0px);
     animation-timing-function: ease-in;
     opacity: 1;
   }
 
   100% {
-    transform: translate3d(0px, -300px, 0px);
+    transform: translate3d(0px, -150px, 0px);
     animation-timing-function: ease-out;
     opacity: 1;
   }
