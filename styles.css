@@ -359,7 +359,7 @@ h2 {
 .experience-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   padding: 8px 0;
 }
 
@@ -372,6 +372,10 @@ h2 {
 .experience-job-title,
 .experience-job-info {
   margin: 0;
+}
+
+.experience-item .project-skills {
+  margin-top: 8px;
 }
 
 .project-skills li {
