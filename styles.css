@@ -284,12 +284,18 @@ body {
 /* Lists */
 .socials-list,
 .project-links-list {
+  margin: 0;
   padding: 0px 0px;
   display: flex;
   gap: 10px;
 }
 
+.socials-list {
+  margin-top: 16px;
+}
+
 .project-skills {
+  margin: 0;
   padding: 0px 0px;
   display: flex;
   gap: 10px;
@@ -345,15 +351,21 @@ h2 {
 }
 
 .experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 8px 0;
 }
 
-.experience-job-title {
-  margin-bottom: 2px;
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+.experience-job-title,
 .experience-job-info {
-  margin-top: 12px;
+  margin: 0;
 }
 
 .project-skills li {
@@ -363,23 +375,40 @@ h2 {
   border-radius: 2px;
 }
 
-.project-title {
-  margin-bottom: 8px;
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-title,
 .project-description {
-  margin-top: 8px;
+  margin: 0;
+}
+
+.personal-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0 0;
 }
 
 .personal-details {
-  margin-top: -15px;
-  padding-top: 2px;
-  margin-bottom: -15px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
   color: #767676;
   font-size: small;
+}
+
+.personal-details p {
+  margin: 0;
 }
 
 .personal-details svg {
@@ -392,4 +421,5 @@ h2 {
   justify-content: center;
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
 }
