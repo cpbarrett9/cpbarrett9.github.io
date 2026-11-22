@@ -287,7 +287,7 @@ body {
   margin: 0;
   padding: 0px 0px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
@@ -321,6 +321,26 @@ button {
 .socials-item a svg,
 .project-links-item a svg {
   color: var(--svg-color);
+}
+
+.socials-item a {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-item a svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.socials-item a[aria-label="Email"] svg {
+  width: 26px;
+  height: 26px;
+  transform: translateY(2px);
 }
 
 .project-links-item a svg {
