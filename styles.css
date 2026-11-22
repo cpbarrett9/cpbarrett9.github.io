@@ -374,6 +374,98 @@ h2 {
   margin: 0;
 }
 
+.li-card {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.li-company {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.li-company > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.li-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.li-company-name,
+.li-role-title,
+.li-meta {
+  margin: 0;
+}
+
+.li-role-title {
+  font-size: 16px;
+}
+
+.li-meta {
+  color: #767676;
+  font-size: small;
+}
+
+.li-roles {
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+/* Vertical timeline linking the roles under one company */
+.li-role {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0 24px 64px;
+}
+
+.li-role:last-child {
+  padding-bottom: 0;
+}
+
+.li-role::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--svg-color);
+}
+
+.li-role:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  bottom: 4px;
+  width: 1px;
+  background-color: var(--svg-color);
+}
+
+.education-card .li-role {
+  padding-left: 0;
+}
+
+.education-card .li-role::before,
+.education-card .li-role::after {
+  display: none;
+}
+
+.li-role .project-skills {
+  margin-top: 8px;
+}
+
 .experience-item .project-skills {
   margin-top: 8px;
 }
