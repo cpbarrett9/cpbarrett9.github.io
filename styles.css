@@ -495,7 +495,52 @@ h2 {
 .projects-section {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+/* Project tabs */
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.project-tab {
+  padding: 0 0 8px;
+  color: #767676;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-tab:hover {
+  color: var(--text-color);
+}
+
+.project-tab[aria-selected="true"] {
+  color: var(--text-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.project-tab:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
   gap: 32px;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.project-image-placeholder {
+  border: 1px dashed var(--svg-color);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* Inset the top sections to match the 20px padding of the education/employment cards */
@@ -505,6 +550,11 @@ h2 {
 .main > .projects-section {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* Match the space below the employment/education cards (8px section + 20px card padding) */
+.main > .projects-section {
+  padding-bottom: 28px;
 }
 
 .project-card {

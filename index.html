@@ -246,283 +246,333 @@
 
       <!-- Projects Section: -->
       <section class="projects-section" aria-label="Projects">
-        <!-- WGTN Sculptures: -->
-        <div class="project-card">
-          <h2 class="project-title">Wellington Sculptures</h2>
-          <p class="project-description">
-            An interactive map of public sculptures in Wellington, New Zealand. Created for the <a href="https://www.sculpture.org.nz/" target="_blank">Wellington Sculpture Trust</a>.
-          </p>
-          <div class="project-image-container">
-            <img src="resources/WGTN-sculptures_screenshot.png">
-          </div>
-          <div class="project-footer">
-          <ul class="project-skills">
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <li>HTML</li>
-          </ul>
+        <div class="project-tabs" role="tablist" aria-label="Project categories">
+          <button class="project-tab" role="tab" id="tab-client" aria-controls="panel-client" aria-selected="true">Client Work</button>
+          <button class="project-tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="false" tabindex="-1">Web &amp; Software</button>
+          <button class="project-tab" role="tab" id="tab-games" aria-controls="panel-games" aria-selected="false" tabindex="-1">Games &amp; Media</button>
+        </div>
 
-          <ul class="project-links-list">
-            <li class="project-links-item">
-            <!-- Project GitHub Link: -->
-              <a href="https://github.com/cpbarrett9/WGTN-Sculptures" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-github-icon lucide-github"
-                >
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                  />
-                  <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
-              </a>
-            </li>
-            <!-- Project Web Link: -->
-            <li class="project-links-item">
-              <a href="https://cpbarrett9.github.io/wellington-sculpture-map/" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-external-link-icon lucide-external-link"
-                >
-                  <path d="M15 3h6v6" />
-                  <path d="M10 14 21 3" />
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg>
-              </a>
-            </li>
-          </ul>
-          <p class="project-date">University Project · March 2026</p>
+        <!-- Client Work Tab: -->
+        <div class="tab-panel" role="tabpanel" id="panel-client" aria-labelledby="tab-client">
+          <!-- Client Work Placeholder 1: -->
+          <div class="project-card">
+            <h2 class="project-title">Client Project 1</h2>
+            <p class="project-description">
+              A short description of the project and the client goes here.
+            </p>
+            <div class="project-image-container project-image-placeholder"></div>
+            <div class="project-footer">
+              <ul class="project-skills">
+                <li>Skill</li>
+                <li>Skill</li>
+                <li>Skill</li>
+              </ul>
+              <p class="project-date">Client Engagement · Month YYYY</p>
+            </div>
+          </div>
+
+          <!-- Client Work Placeholder 2: -->
+          <div class="project-card">
+            <h2 class="project-title">Client Project 2</h2>
+            <p class="project-description">
+              A short description of the project and the client goes here.
+            </p>
+            <div class="project-image-container project-image-placeholder"></div>
+            <div class="project-footer">
+              <ul class="project-skills">
+                <li>Skill</li>
+                <li>Skill</li>
+                <li>Skill</li>
+              </ul>
+              <p class="project-date">Client Engagement · Month YYYY</p>
+            </div>
           </div>
         </div>
 
-        <!-- WGTN Street Scans: -->
-        <div class="project-card">
-          <h2 class="project-title">Wellington Street Scans</h2>
-          <p class="project-description">
-            A web image archive of walls, sidewalks, signs, and other found textures captured with a portable scanner around Wellington, NZ.
-          </p>
-          <div class="project-image-container">
-            <img src="resources/screenshot_streetscans.png">
-          </div>
-          <div class="project-footer">
-          <ul class="project-skills">
-            <li>SQL</li>
-            <li>Javascript</li>
-            <li>CSS</li>
-            <li>PHP</li>
-          </ul>
-
-          <ul class="project-links-list">
-            <li class="project-links-item">
-            <!-- Project GitHub Link: -->
-              <a href="https://github.com/cpbarrett9/wgtnstreetscans.pics" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-github-icon lucide-github"
-                >
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                  />
-                  <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
-              </a>
-            </li>
-            <!-- Project Web Link: -->
-            <li class="project-links-item">
-              <a href="https://cpbarrett9.github.io/wgtnstreetscans/" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-external-link-icon lucide-external-link"
-                >
-                  <path d="M15 3h6v6" />
-                  <path d="M10 14 21 3" />
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg>
-              </a>
-            </li>
-          </ul>
-          <p class="project-date">University Project · December 2026</p>
-          </div>
-        </div>
-
-        <!-- Motivation Garden: -->
-        <div class="project-card">
-          <h2 class="project-title">Motivation Garden</h2>
-          <p class="project-description">
-            A gameified productivity app that rewards completed tasks with items for a virtual garden.
-          </p>
-          <div class="project-image-container">
-            <img src="resources/motivation-garden_screenshot.png">
-          </div>
-          <div class="project-footer">
-          <ul class="project-skills">
-            <li>Java</li>
-            <li>Swing</li>
-          </ul>
-          <ul class="project-links-list">
-            <li class="project-links-item">
-            <!-- Project GitHub Link: -->
-              <a href="https://github.com/cpbarrett9/motivation-garden" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-github-icon lucide-github"
-                >
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                  />
-                  <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
-              </a>
-            </li>
-          </ul>
-          <p class="project-date">University Project · November 2026</p>
-          </div>
-        </div>
-        
-        <!-- Fish Game -->
-        <div class="project-card">
-          <h2 class="project-title">Fish Game</h2>
-          <p class="project-description">
-            An arcade-style game where you eat smaller fish and avoid larger fish.
-          </p>
-          <div class="project-image-container">
-            <img src="resources/fish-game_screenshot2.png">
-          </div>
-          <div class="project-footer">
+        <!-- Web & Software Tab: -->
+        <div class="tab-panel" role="tabpanel" id="panel-web" aria-labelledby="tab-web" hidden>
+          <!-- WGTN Sculptures: -->
+          <div class="project-card">
+            <h2 class="project-title">Wellington Sculptures</h2>
+            <p class="project-description">
+              An interactive map of public sculptures in Wellington, New Zealand. Created for the <a href="https://www.sculpture.org.nz/" target="_blank">Wellington Sculpture Trust</a>.
+            </p>
+            <div class="project-image-container">
+              <img src="resources/WGTN-sculptures_screenshot.png">
+            </div>
+            <div class="project-footer">
             <ul class="project-skills">
-            <li>GDScript (Python)</li>
-            <li>Godot</li>
-            <li>Game Development</li>
-          </ul>
-          <ul class="project-links-list">
-            <li class="project-links-item">
-            <!-- Project GitHub Link: -->
-              <a href="https://github.com/cpbarrett9/fish-game" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-github-icon lucide-github"
-                >
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                  />
-                  <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
-              </a>
-            </li>
-            <!-- Project Web Link: -->
-            <li class="project-links-item">
-              <a href="https://cpbarrett.itch.io/fish-game" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-external-link-icon lucide-external-link"
-                >
-                  <path d="M15 3h6v6" />
-                  <path d="M10 14 21 3" />
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg>
-              </a>
-            </li>
-          </ul>
-          <p class="project-date">University Project · October 2026</p>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>CSS</li>
+              <li>HTML</li>
+            </ul>
+
+            <ul class="project-links-list">
+              <li class="project-links-item">
+              <!-- Project GitHub Link: -->
+                <a href="https://github.com/cpbarrett9/WGTN-Sculptures" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-github-icon lucide-github"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                </a>
+              </li>
+              <!-- Project Web Link: -->
+              <li class="project-links-item">
+                <a href="https://cpbarrett9.github.io/wellington-sculpture-map/" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link-icon lucide-external-link"
+                  >
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    /></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="project-date">University Project · March 2026</p>
+            </div>
           </div>
+
+          <!-- WGTN Street Scans: -->
+          <div class="project-card">
+            <h2 class="project-title">Wellington Street Scans</h2>
+            <p class="project-description">
+              A web image archive of walls, sidewalks, signs, and other found textures captured with a portable scanner around Wellington, NZ.
+            </p>
+            <div class="project-image-container">
+              <img src="resources/screenshot_streetscans.png">
+            </div>
+            <div class="project-footer">
+            <ul class="project-skills">
+              <li>SQL</li>
+              <li>Javascript</li>
+              <li>CSS</li>
+              <li>PHP</li>
+            </ul>
+
+            <ul class="project-links-list">
+              <li class="project-links-item">
+              <!-- Project GitHub Link: -->
+                <a href="https://github.com/cpbarrett9/wgtnstreetscans.pics" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-github-icon lucide-github"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                </a>
+              </li>
+              <!-- Project Web Link: -->
+              <li class="project-links-item">
+                <a href="https://cpbarrett9.github.io/wgtnstreetscans/" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link-icon lucide-external-link"
+                  >
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    /></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="project-date">University Project · December 2026</p>
+            </div>
+          </div>
+
+          <!-- Motivation Garden: -->
+          <div class="project-card">
+            <h2 class="project-title">Motivation Garden</h2>
+            <p class="project-description">
+              A gameified productivity app that rewards completed tasks with items for a virtual garden.
+            </p>
+            <div class="project-image-container">
+              <img src="resources/motivation-garden_screenshot.png">
+            </div>
+            <div class="project-footer">
+            <ul class="project-skills">
+              <li>Java</li>
+              <li>Swing</li>
+            </ul>
+            <ul class="project-links-list">
+              <li class="project-links-item">
+              <!-- Project GitHub Link: -->
+                <a href="https://github.com/cpbarrett9/motivation-garden" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-github-icon lucide-github"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="project-date">University Project · November 2026</p>
+            </div>
+          </div>
+
         </div>
-        
-        <!-- Hugo's Number: -->
-        <div class="project-card">
-          <h2 class="project-title">Hugo's Number</h2>
-          <p class="project-description">
-            A "horror-lite" narrative experience that procedurally generates a new storyline each time its played.
-          </p>
-          <div class="project-image-container">
-            <img src="resources/hugos-number_screenshot.png">
+
+        <!-- Games & Media Tab: -->
+        <div class="tab-panel" role="tabpanel" id="panel-games" aria-labelledby="tab-games" hidden>
+          <!-- Fish Game -->
+          <div class="project-card">
+            <h2 class="project-title">Fish Game</h2>
+            <p class="project-description">
+              An arcade-style game where you eat smaller fish and avoid larger fish.
+            </p>
+            <div class="project-image-container">
+              <img src="resources/fish-game_screenshot2.png">
+            </div>
+            <div class="project-footer">
+              <ul class="project-skills">
+              <li>GDScript (Python)</li>
+              <li>Godot</li>
+              <li>Game Development</li>
+            </ul>
+            <ul class="project-links-list">
+              <li class="project-links-item">
+              <!-- Project GitHub Link: -->
+                <a href="https://github.com/cpbarrett9/fish-game" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-github-icon lucide-github"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                </a>
+              </li>
+              <!-- Project Web Link: -->
+              <li class="project-links-item">
+                <a href="https://cpbarrett.itch.io/fish-game" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link-icon lucide-external-link"
+                  >
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    /></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="project-date">University Project · October 2026</p>
+            </div>
           </div>
-          <div class="project-footer">
-          <ul class="project-skills">
-            <li>GML (JavaScript)</li>
-            <li>Game Maker Studio 2</li>
-            <li>Game Development</li>
-          </ul>
-          <ul class="project-links-list">
-            <!-- Project Web Link: -->
-            <li class="project-links-item">
-              <a href="https://cpbarrett.itch.io/hugos-number" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-external-link-icon lucide-external-link"
-                >
-                  <path d="M15 3h6v6" />
-                  <path d="M10 14 21 3" />
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg>
-              </a>
-            </li>
-          </ul>
-          <p class="project-date">University Project · June 2023</p>
+        
+          <!-- Hugo's Number: -->
+          <div class="project-card">
+            <h2 class="project-title">Hugo's Number</h2>
+            <p class="project-description">
+              A "horror-lite" narrative experience that procedurally generates a new storyline each time its played.
+            </p>
+            <div class="project-image-container">
+              <img src="resources/hugos-number_screenshot.png">
+            </div>
+            <div class="project-footer">
+            <ul class="project-skills">
+              <li>GML (JavaScript)</li>
+              <li>Game Maker Studio 2</li>
+              <li>Game Development</li>
+            </ul>
+            <ul class="project-links-list">
+              <!-- Project Web Link: -->
+              <li class="project-links-item">
+                <a href="https://cpbarrett.itch.io/hugos-number" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-external-link-icon lucide-external-link"
+                  >
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    /></svg>
+                </a>
+              </li>
+            </ul>
+            <p class="project-date">University Project · June 2023</p>
+            </div>
           </div>
         </div>
       </section>
@@ -655,5 +705,29 @@
         </div>
       </section>
     </div>
+
+    <script>
+      const tabs = Array.from(document.querySelectorAll(".project-tab"));
+
+      function selectTab(tab) {
+        tabs.forEach((t) => {
+          const selected = t === tab;
+          t.setAttribute("aria-selected", selected);
+          t.tabIndex = selected ? 0 : -1;
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !selected;
+        });
+      }
+
+      tabs.forEach((tab, i) => {
+        tab.addEventListener("click", () => selectTab(tab));
+        tab.addEventListener("keydown", (e) => {
+          const dir = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+          if (!dir) return;
+          const next = tabs[(i + dir + tabs.length) % tabs.length];
+          selectTab(next);
+          next.focus();
+        });
+      });
+    </script>
   </body>
 </html>
