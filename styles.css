@@ -228,7 +228,23 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .project-image-container img {
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
+}
+
+/* Below the hover-scroll breakpoint, fill the container so short images leave no gap.
+   On desktop the image keeps its natural height so the hover animation can scroll it. */
+@media (max-width: 1059.98px) {
+  .project-image-container img {
+    height: 100%;
+  }
+}
+
+/* Wide images: on narrow screens match the container to the image's ratio so nothing is cropped or left empty */
+@media (max-width: 600px) {
+  .project-image-wide {
+    height: auto;
+    aspect-ratio: 1125 / 489;
+  }
 }
 
 /* KEN BURNS (WIP) */
@@ -639,7 +655,7 @@ h2 {
     align-items: center;
     gap: 6px 20px;
     margin-top: 24px;
-    margin-bottom: -16px; /* pulls the row close to the divider so it reads as part of it */
+    margin-bottom: -12px; /* pulls the row close to the divider so it reads as part of it */
   }
 
   .personal-details {
@@ -676,4 +692,9 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+}
+
+/* The briefcase fills its box more than the graduation cap, so it looks closer to the divider above; this evens that out */
+#experience-divider + .section-graphic {
+  padding-top: 3px;
 }
