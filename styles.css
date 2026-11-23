@@ -370,6 +370,7 @@ button {
   font-size: 19px;
   margin-top: 8px;
   margin-bottom: 0px;
+  line-height: 1.2;
 }
 
 h2 {
@@ -379,7 +380,7 @@ h2 {
 .experience-section {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 0;
   padding: 8px 0;
 }
 
@@ -411,14 +412,6 @@ h2 {
   gap: 4px;
 }
 
-.li-logo {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
 .li-company-name,
 .li-role-title,
 .li-meta {
@@ -426,7 +419,11 @@ h2 {
 }
 
 .li-role-title {
-  font-size: 16px;
+  font-size: 15px;
+}
+
+.li-company-name {
+  font-size: 20px;
 }
 
 .li-meta {
@@ -435,51 +432,48 @@ h2 {
 }
 
 .li-roles {
-  margin: 20px 0 0;
+  margin: 14px 0 0;
   padding: 0;
 }
 
-/* Vertical timeline linking the roles under one company */
 .li-role {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 0 0 24px 64px;
+  padding: 0 0 24px;
 }
 
 .li-role:last-child {
   padding-bottom: 0;
 }
 
-.li-role::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 6px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--svg-color);
+/* Subtle timeline linking the roles under one company (employment only) */
+.li-card:not(.education-card) .li-role {
+  position: relative;
+  padding-left: 20px;
 }
 
-.li-role:not(:last-child)::after {
+.li-card:not(.education-card) .li-role::before {
   content: "";
   position: absolute;
-  left: 24px;
-  top: 20px;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--svg-color);
+  opacity: 0.6;
+}
+
+.li-card:not(.education-card) .li-role:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 16px;
   bottom: 4px;
   width: 1px;
   background-color: var(--svg-color);
-}
-
-.education-card .li-role {
-  padding-left: 0;
-}
-
-.education-card .li-role::before,
-.education-card .li-role::after {
-  display: none;
+  opacity: 0.3;
 }
 
 .li-role .project-skills {
@@ -495,12 +489,22 @@ h2 {
   color: var(--svg-color);
   padding: 2px 8px;
   border-radius: 2px;
+  font-size: 13px;
 }
 
 .projects-section {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+/* Inset the top sections to match the 20px padding of the education/employment cards */
+.main > header,
+.main > .socials-list,
+.main > .personal-details-list,
+.main > .projects-section {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .project-card {
@@ -529,6 +533,11 @@ h2 {
 .project-title,
 .project-description {
   margin: 0;
+}
+
+.project-description {
+  color: #767676;
+  font-size: small;
 }
 
 .personal-details-list {
