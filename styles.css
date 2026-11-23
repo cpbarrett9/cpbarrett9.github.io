@@ -563,9 +563,7 @@ h2 {
 }
 
 /* Inset the top sections to match the 20px padding of the education/employment cards */
-.main > header,
-.main > .socials-list,
-.main > .personal-details-list,
+.main > .intro,
 .main > .projects-section {
   padding-left: 20px;
   padding-right: 20px;
@@ -631,6 +629,28 @@ h2 {
   flex-direction: column;
   gap: 4px;
   margin: 16px 0 0;
+}
+
+/* Desktop: personal details sit in a single row, just above the projects divider */
+@media (min-width: 1061px) {
+  .personal-details-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 20px;
+    margin-top: 24px;
+    margin-bottom: -16px; /* pulls the row close to the divider so it reads as part of it */
+  }
+
+  .personal-details {
+    white-space: nowrap;
+  }
+
+  /* Nudge the text down so it centres on the icon */
+  .personal-details p {
+    position: relative;
+    top: 1.5px;
+  }
 }
 
 .personal-details {
