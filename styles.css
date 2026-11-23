@@ -511,7 +511,7 @@ h2 {
 .projects-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
 }
 
 /* Project tabs */
@@ -547,6 +547,15 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+/* Education tabs: align the tab row with the card text and keep the cards' own spacing */
+.experience-section .project-tabs {
+  padding: 0 20px 6px;
+}
+
+.experience-section .tab-panel {
+  gap: 0;
 }
 
 .tab-panel[hidden] {

@@ -695,72 +695,125 @@
 
       <!-- Education Section: -->
       <section class="experience-section" aria-label="Education">
-        <div class="li-card education-card">
-          <div class="li-company">
-            <div>
-              <h2 class="li-company-name">Victoria University of Wellington</h2>
-              <p class="li-meta">Wellington, New Zealand</p>
-            </div>
-          </div>
-          <ul class="li-roles">
-            <li class="li-role">
-              <h3 class="li-role-title">Masters in Software Development</h3>
-              <p class="li-meta">July 2025 - June 2026</p>
-              <ul class="project-skills">
-                <li>Java</li>
-                <li>Python</li>
-                <li>Javascript</li>
-                <li>C#</li>
-                <li>Web Development</li>
-                <li>AGILE Methods</li>
-              </ul>
-            </li>
-          </ul>
+        <div class="project-tabs" role="tablist" aria-label="Education categories">
+          <button class="project-tab" role="tab" id="tab-degrees" aria-controls="panel-degrees" aria-selected="true">Degrees</button>
+          <button class="project-tab" role="tab" id="tab-certifications" aria-controls="panel-certifications" aria-selected="false" tabindex="-1">Certifications</button>
         </div>
 
-        <div class="li-card education-card">
-          <div class="li-company">
-            <div>
-              <h2 class="li-company-name">Western Washington University</h2>
-              <p class="li-meta">Bellingham, Washington, USA</p>
+        <!-- Degrees Tab: -->
+        <div class="tab-panel" role="tabpanel" id="panel-degrees" aria-labelledby="tab-degrees">
+          <div class="li-card education-card">
+            <div class="li-company">
+              <div>
+                <h2 class="li-company-name">Victoria University of Wellington</h2>
+                <p class="li-meta">Wellington, New Zealand</p>
+              </div>
             </div>
+            <ul class="li-roles">
+              <li class="li-role">
+                <h3 class="li-role-title">Masters in Software Development</h3>
+                <p class="li-meta">July 2025 - June 2026</p>
+                <ul class="project-skills">
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>Javascript</li>
+                  <li>C#</li>
+                  <li>Web Development</li>
+                  <li>AGILE Methods</li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <ul class="li-roles">
-            <li class="li-role">
-              <h3 class="li-role-title">B.A. in English, Art History</h3>
-              <p class="li-meta">January 2019 - June 2023</p>
-              <ul class="project-skills">
-                <li>Writing</li>
-                <li>Communication</li>
-                <li>Arts & Culture</li>
-                <li>Interdisciplinary Collaboration</li>
-              </ul>
-            </li>
-          </ul>
+
+          <div class="li-card education-card">
+            <div class="li-company">
+              <div>
+                <h2 class="li-company-name">Western Washington University</h2>
+                <p class="li-meta">Bellingham, Washington, USA</p>
+              </div>
+            </div>
+            <ul class="li-roles">
+              <li class="li-role">
+                <h3 class="li-role-title">B.A. in English, Art History</h3>
+                <p class="li-meta">January 2019 - June 2023</p>
+                <ul class="project-skills">
+                  <li>Writing</li>
+                  <li>Communication</li>
+                  <li>Arts & Culture</li>
+                  <li>Interdisciplinary Collaboration</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Certifications Tab: -->
+        <div class="tab-panel" role="tabpanel" id="panel-certifications" aria-labelledby="tab-certifications" hidden>
+          <!-- Certification Placeholder: -->
+          <div class="li-card education-card">
+            <div class="li-company">
+              <div>
+                <h2 class="li-company-name">Salesforce Certified Platform Developer</h2>
+                <p class="li-meta">Salesforce Trailhead Academy</p>
+              </div>
+            </div>
+            <ul class="li-roles">
+              <li class="li-role">
+                <h3 class="li-role-title">Credential ID 8226451</h3>
+                <p class="li-meta">October 2026</p>
+                <ul class="project-skills">
+                  <li>Apex</li>
+                  <li>SOQL</li>
+                  <li>Flow</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="li-card education-card">
+            <div class="li-company">
+              <div>
+                <h2 class="li-company-name">Salesforce Certified Platform Administrator</h2>
+                <p class="li-meta">Salesforce Trailhead Academy</p>
+              </div>
+            </div>
+            <ul class="li-roles">
+              <li class="li-role">
+                <h3 class="li-role-title">Credential ID 7977285</h3>
+                <p class="li-meta">July 2026</p>
+                <ul class="project-skills">
+                  <li>Salesforce Development</li>
+                  <li>Salesforce Administration</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
 
     <script>
-      const tabs = Array.from(document.querySelectorAll(".project-tab"));
+      // Each tablist (projects, education) switches independently
+      document.querySelectorAll(".project-tabs").forEach((tablist) => {
+        const tabs = Array.from(tablist.querySelectorAll(".project-tab"));
 
-      function selectTab(tab) {
-        tabs.forEach((t) => {
-          const selected = t === tab;
-          t.setAttribute("aria-selected", selected);
-          t.tabIndex = selected ? 0 : -1;
-          document.getElementById(t.getAttribute("aria-controls")).hidden = !selected;
-        });
-      }
+        function selectTab(tab) {
+          tabs.forEach((t) => {
+            const selected = t === tab;
+            t.setAttribute("aria-selected", selected);
+            t.tabIndex = selected ? 0 : -1;
+            document.getElementById(t.getAttribute("aria-controls")).hidden = !selected;
+          });
+        }
 
-      tabs.forEach((tab, i) => {
-        tab.addEventListener("click", () => selectTab(tab));
-        tab.addEventListener("keydown", (e) => {
-          const dir = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
-          if (!dir) return;
-          const next = tabs[(i + dir + tabs.length) % tabs.length];
-          selectTab(next);
-          next.focus();
+        tabs.forEach((tab, i) => {
+          tab.addEventListener("click", () => selectTab(tab));
+          tab.addEventListener("keydown", (e) => {
+            const dir = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+            if (!dir) return;
+            const next = tabs[(i + dir + tabs.length) % tabs.length];
+            selectTab(next);
+            next.focus();
+          });
         });
       });
     </script>
