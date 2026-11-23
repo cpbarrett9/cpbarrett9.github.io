@@ -292,7 +292,7 @@ body {
 }
 
 .socials-list {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .project-skills {
@@ -515,18 +515,35 @@ h2 {
 
 .project-footer {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px 16px;
   margin-top: 4px;
 }
 
+.project-footer .project-links-list {
+  order: 1;
+}
+
+.project-footer .project-skills {
+  order: 2;
+}
+
+/* Subtle date template: sits immediately after the skills on desktop */
+.project-date {
+  order: 3;
+  margin: 0;
+  color: #767676;
+  font-size: small;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* On mobile, skills take their own row and the date sits to the right of the links */
 @media (max-width: 600px) {
-  .project-footer {
-    flex-direction: column;
-    align-items: flex-start;
+  .project-footer .project-skills {
+    order: 0;
+    flex-basis: 100%;
   }
 }
 
