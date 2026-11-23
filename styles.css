@@ -228,7 +228,23 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .project-image-container img {
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
+}
+
+/* Below the hover-scroll breakpoint, fill the container so short images leave no gap.
+   On desktop the image keeps its natural height so the hover animation can scroll it. */
+@media (max-width: 1059.98px) {
+  .project-image-container img {
+    height: 100%;
+  }
+}
+
+/* Wide images: on narrow screens match the container to the image's ratio so nothing is cropped or left empty */
+@media (max-width: 600px) {
+  .project-image-wide {
+    height: auto;
+    aspect-ratio: 1125 / 489;
+  }
 }
 
 /* KEN BURNS (WIP) */
@@ -495,16 +511,92 @@ h2 {
 .projects-section {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+}
+
+/* Project tabs */
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.project-tab {
+  padding: 0 0 8px;
+  color: #767676;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-tab:hover {
+  color: var(--text-color);
+}
+
+.project-tab[aria-selected="true"] {
+  color: var(--text-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.project-tab:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
   gap: 32px;
 }
 
+/* Education tabs: align the tab row with the card text and keep the cards' own spacing */
+.experience-section .project-tabs {
+  padding: 0 20px 6px;
+}
+
+.experience-section .tab-panel {
+  gap: 0;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.tab-panel:not([hidden]) {
+  animation: tab-fade 0.25s ease;
+}
+
+@keyframes tab-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-panel:not([hidden]) {
+    animation: none;
+  }
+}
+
+.project-image-placeholder {
+  border: 1px dashed var(--svg-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 /* Inset the top sections to match the 20px padding of the education/employment cards */
-.main > header,
-.main > .socials-list,
-.main > .personal-details-list,
+.main > .intro,
 .main > .projects-section {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* Match the space below the employment/education cards (8px section + 20px card padding) */
+.main > .projects-section {
+  padding-bottom: 28px;
 }
 
 .project-card {
@@ -564,6 +656,28 @@ h2 {
   margin: 16px 0 0;
 }
 
+/* Desktop: personal details sit in a single row, just above the projects divider */
+@media (min-width: 1061px) {
+  .personal-details-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 20px;
+    margin-top: 24px;
+    margin-bottom: -12px; /* pulls the row close to the divider so it reads as part of it */
+  }
+
+  .personal-details {
+    white-space: nowrap;
+  }
+
+  /* Nudge the text down so it centres on the icon */
+  .personal-details p {
+    position: relative;
+    top: 1.5px;
+  }
+}
+
 .personal-details {
   display: flex;
   align-items: center;
@@ -587,4 +701,9 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+}
+
+/* The briefcase fills its box more than the graduation cap, so it looks closer to the divider above; this evens that out */
+#experience-divider + .section-graphic {
+  padding-top: 3px;
 }
