@@ -537,6 +537,25 @@ h2 {
   display: none;
 }
 
+.tab-panel:not([hidden]) {
+  animation: tab-fade 0.25s ease;
+}
+
+@keyframes tab-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-panel:not([hidden]) {
+    animation: none;
+  }
+}
+
 .project-image-placeholder {
   border: 1px dashed var(--svg-color);
   border-radius: 4px;
