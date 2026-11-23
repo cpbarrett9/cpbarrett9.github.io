@@ -543,6 +543,21 @@ h2 {
   outline-offset: 4px;
 }
 
+/* Mobile: keep the project tabs on one row, spanning the full width */
+@media (max-width: 600px) {
+  .projects-section .project-tabs {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0 8px;
+  }
+
+  .projects-section .project-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: clamp(11px, 3.6vw, 16px);
+  }
+}
+
 .tab-panel {
   display: flex;
   flex-direction: column;
@@ -706,4 +721,23 @@ h2 {
 /* The briefcase fills its box more than the graduation cap, so it looks closer to the divider above; this evens that out */
 #experience-divider + .section-graphic {
   padding-top: 3px;
+}
+
+/* Mobile: drop the 20px side inset so all content runs the full width of the dividers */
+@media (max-width: 600px) {
+  .main > .intro,
+  .main > .projects-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .li-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .experience-section .project-tabs {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
